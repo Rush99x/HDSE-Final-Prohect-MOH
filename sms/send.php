@@ -14,8 +14,8 @@ $message = $_POST["message"];
 
 if ($_POST["provider"] === "infobip") {
 
-    $base_url = "j3zynv.api.infobip.com";
-    $api_key = "16d58db2a820cef7b193652e8fb6e3d5-7db1e889-fe40-444e-bd5f-8e404e477743";
+    $base_url = "";
+    $api_key = "";
 
     $configuration = new Configuration(host: $base_url, apiKey: $api_key);
 
@@ -35,12 +35,12 @@ if ($_POST["provider"] === "infobip") {
 
 } else {   // Twilio
 
-    $account_id = "AC45bcde7711805566cb36f5c0c0c428fd";
-    $auth_token = "5086a259dbf5c64d4094e95ffc24814a";
+    $account_id = "";
+    $auth_token = "";
 
     $client = new Client($account_id, $auth_token);
 
-    $twilio_number = "+16597582541";
+    $twilio_number = "";
 
     $client->messages->create(
         $number,
